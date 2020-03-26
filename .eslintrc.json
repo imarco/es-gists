@@ -1,0 +1,21 @@
+{
+    "extends": ["airbnb", "prettier"],
+    "plugins": ["prettier"],
+    "rules": {
+        "prettier/prettier": ["warn"],
+        "no-console": 0,
+        "global-require": 0,
+        "func-names": 0,
+        "no-underscore-dangle": 0,
+        "no-unused-vars": 1,
+        "spaced-comment": 0,
+        "no-param-reassign": ["error", { "props": false }],
+        "no-restricted-syntax": [
+            "error",
+            {
+                "selector": "CallExpression[callee.object.name='console'][callee.property.name!=/^(log|warn|error|info|trace|time|timeEnd)$/]",
+                "message": "Unexpected property on console object was called"
+            }
+        ]
+    }
+}
